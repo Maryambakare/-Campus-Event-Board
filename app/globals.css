@@ -376,9 +376,32 @@ a {
 }
 
 .results-summary {
-  margin: 0 0 17px;
+  margin: 0;
   color: #849087;
   font-size: 12px;
+}
+
+.results-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 0 0 17px;
+}
+
+.sort-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #758179;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.sort-indicator svg {
+  width: 15px;
+  height: 15px;
+  color: var(--green);
 }
 
 .visually-hidden {

@@ -12,14 +12,21 @@ export default function EventBrowser({ events }) {
   const filteredEvents = useMemo(() => {
     const normalizedQuery = query.trim().toLocaleLowerCase();
 
-    return events.filter((event) => {
-      const matchesCategory = category === "All" || event.category === category;
-      const matchesTitle = event.title
-        .toLocaleLowerCase()
-        .includes(normalizedQuery);
+    return events
+      .filter((event) => {
+        const matchesCategory =
+          category === "All" || event.category === category;
+        const matchesTitle = event.title
+          .toLocaleLowerCase()
+          .includes(normalizedQuery);
 
-      return matchesCategory && matchesTitle;
-    });
+        return matchesCategory && matchesTitle;
+      })
+      .sort(
+        (first, second) =>
+          first.date.localeCompare(second.date) ||
+          first.time.localeCompare(second.time),
+      );
   }, [category, events, query]);
 
   return (
@@ -79,11 +86,25 @@ export default function EventBrowser({ events }) {
         </label>
       </div>
 
-      <p className="results-summary" aria-live="polite">
-        {filteredEvents.length === events.length
-          ? `${events.length} events`
-          : `${filteredEvents.length} of ${events.length} events`}
-      </p>
+      <div className="results-row">
+        <p className="results-summary" aria-live="polite">
+          {filteredEvents.length === events.length
+            ? `${events.length} events`
+            : `${filteredEvents.length} of ${events.length} events`}
+        </p>
+        <span className="sort-indicator">
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path
+              d="M4.5 3.5v9m0 0-2-2m2 2 2-2m5-7v9m0 0 2-2m-2 2-2-2"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.25"
+            />
+          </svg>
+          Soonest first
+        </span>
+      </div>
 
       {filteredEvents.length > 0 ? (
         <div className="event-grid">
