@@ -1,4 +1,4 @@
-import EventCard from "../components/EventCard";
+import EventBrowser from "../components/EventBrowser";
 import Navigation from "../components/Navigation";
 import { events } from "../data";
 
@@ -48,13 +48,8 @@ export default function Home() {
               <p className="section-kicker">Make campus yours</p>
               <h2 id="events-title">Coming up on campus</h2>
             </div>
-            <span className="event-count">{events.length} events</span>
           </div>
-          <div className="event-grid">
-            {events.map((event) => (
-              <EventCard key={event.id} event={event} />
-            ))}
-          </div>
+          <EventBrowser events={events} />
         </section>
       </main>
       <footer className="site-footer">
