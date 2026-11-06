@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import EventCard from "./EventCard";
 
-const categories = ["All", "Tech", "Sports", "Faith and Social"];
+const categories = ["All", "Tech", "Sports", "Faith", "Social"];
 
 export default function EventBrowser({ events }) {
   const [query, setQuery] = useState("");

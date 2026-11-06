@@ -26,7 +26,7 @@ export const events = [
   {
     id: "sunday-supper-and-stories",
     title: "Sunday Supper & Stories",
-    category: "Faith and Social",
+    category: "Social",
     date: "2026-11-16",
     time: "18:00",
     venue: "The Commons, Student Union",
@@ -48,16 +48,16 @@ export const events = [
       "Learn the essentials of accessible digital design in a hands-on session led by the campus UX society. Bring a laptop if you have one; no design experience is needed.",
   },
   {
-    id: "mindful-morning-yoga",
-    title: "Mindful Morning Yoga",
-    category: "Faith and Social",
+    id: "interfaith-reflection-circle",
+    title: "Interfaith Reflection Circle",
+    category: "Faith",
     date: "2026-11-21",
-    time: "08:30",
-    venue: "Riverside Lawn",
+    time: "16:00",
+    venue: "Multifaith Centre, West Quad",
     image:
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=85",
     description:
-      "Start the weekend with a gentle, beginner-friendly outdoor yoga class and a chance to slow down. Mats are available to borrow, and all abilities are welcome.",
+      "Join students and campus faith leaders for a welcoming hour of reflection, conversation, and quiet. Every faith and worldview is respected; no prior experience or affiliation is needed.",
   },
   {
     id: "robotics-showcase",
@@ -86,7 +86,7 @@ export const events = [
   {
     id: "winter-lights-social",
     title: "Winter Lights Social",
-    category: "Faith and Social",
+    category: "Social",
     date: "2026-12-03",
     time: "17:30",
     venue: "East Quad",
