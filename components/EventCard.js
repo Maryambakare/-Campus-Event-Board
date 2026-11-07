@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SaveEventButton from "./SaveEventButton";
 
 const dateFormatter = new Intl.DateTimeFormat("en", {
   weekday: "short",
@@ -42,6 +43,7 @@ export default function EventCard({ event }) {
           <span className="event-venue" title={event.venue}>
             {event.venue}
           </span>
+          <SaveEventButton eventId={event.id} />
           <Link className="event-link" href={`/events/${event.id}`}>
             Details
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">

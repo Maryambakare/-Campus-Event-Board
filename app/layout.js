@@ -1,4 +1,5 @@
 import "./globals.css";
+import { SavedEventsProvider } from "../context/SavedEventsContext";
 
 export const metadata = {
   title: "Campus Loop | Find your next campus moment",
@@ -9,7 +10,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <SavedEventsProvider>{children}</SavedEventsProvider>
+      </body>
     </html>
   );
 }
