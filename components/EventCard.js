@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import CategoryBadge from "./CategoryBadge";
 import SaveEventButton from "./SaveEventButton";
 
 const dateFormatter = new Intl.DateTimeFormat("en", {
@@ -27,7 +28,7 @@ export default function EventCard({ event }) {
           sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
           unoptimized
         />
-        <span className="category-badge">{event.category}</span>
+        <CategoryBadge category={event.category} />
       </Link>
       <div className="event-card-content">
         <p className="event-date">

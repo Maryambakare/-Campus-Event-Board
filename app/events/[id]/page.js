@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import CategoryBadge from "../../../components/CategoryBadge";
 import Navigation from "../../../components/Navigation";
 import SaveEventButton from "../../../components/SaveEventButton";
 import { events } from "../../../data";
@@ -55,7 +56,7 @@ export default async function EventDetails({ params }) {
               priority
               unoptimized
             />
-            <span className="category-badge">{event.category}</span>
+            <CategoryBadge category={event.category} />
           </div>
 
           <div className="detail-content">
