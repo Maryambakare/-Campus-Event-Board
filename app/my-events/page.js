@@ -1,5 +1,5 @@
 import Navigation from "../../components/Navigation";
-import SavedEventsList from "../../components/SavedEventsList";
+import MyEventsLists from "../../components/MyEventsLists";
 
 export const metadata = {
   title: "My Events | Campus Loop",
@@ -17,7 +17,7 @@ export default function MyEvents() {
               <h1 id="saved-events-title">My Events</h1>
             </div>
           </div>
-          <SavedEventsList />
+          <MyEventsLists />
         </section>
       </main>
       <footer className="site-footer">
