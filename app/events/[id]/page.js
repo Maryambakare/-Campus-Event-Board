@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CategoryBadge from "../../../components/CategoryBadge";
+import EventCountdown from "../../../components/EventCountdown";
 import Navigation from "../../../components/Navigation";
 import SaveEventButton from "../../../components/SaveEventButton";
 import { events } from "../../../data";
@@ -125,6 +126,7 @@ export default async function EventDetails({ params }) {
               </section>
             </div>
 
+            <EventCountdown event={event} />
             <SaveEventButton eventId={event.id} />
             <Link className="detail-action" href="/">
               Explore more events

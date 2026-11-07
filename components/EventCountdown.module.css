@@ -1,0 +1,101 @@
+.countdown {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 24px;
+  padding: 18px 20px;
+  border: 1px solid #e1e9df;
+  border-radius: 15px;
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(220 236 217 / 55%), transparent 48%),
+    #f6f8f3;
+}
+
+.clockIcon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 12px;
+  background: #e8f0e5;
+  color: var(--green);
+}
+
+.clockIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.content {
+  min-width: 0;
+}
+
+.title {
+  margin: 1px 0 9px;
+  color: #647168;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.message {
+  margin: 0;
+  color: #35423a;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.units {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  color: #35423a;
+}
+
+.prefix {
+  margin-right: 2px;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.unit {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  color: var(--green-dark);
+  white-space: nowrap;
+}
+
+.unit strong {
+  font-size: 19px;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.unit > span {
+  color: #66746a;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .countdown {
+    gap: 11px;
+    margin-top: 20px;
+    padding: 15px;
+  }
+
+  .units {
+    column-gap: 7px;
+    row-gap: 5px;
+  }
+
+  .unit strong {
+    font-size: 17px;
+  }
+}
