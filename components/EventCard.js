@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import CategoryBadge from "./CategoryBadge";
+import EventImage from "./EventImage";
 import SaveEventButton from "./SaveEventButton";
 
 const dateFormatter = new Intl.DateTimeFormat("en", {
@@ -20,13 +20,12 @@ export default function EventCard({ event }) {
         href={`/events/${event.id}`}
         aria-label={`View ${event.title}`}
       >
-        <Image
+        <EventImage
           className="event-image"
           src={event.image}
           alt=""
           fill
           sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-          unoptimized
         />
         <CategoryBadge category={event.category} />
       </Link>

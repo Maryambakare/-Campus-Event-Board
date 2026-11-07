@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CategoryBadge from "../../../components/CategoryBadge";
 import EventCountdown from "../../../components/EventCountdown";
+import EventImage from "../../../components/EventImage";
 import Navigation from "../../../components/Navigation";
 import SaveEventButton from "../../../components/SaveEventButton";
 import { events } from "../../../data";
@@ -48,14 +48,13 @@ export default async function EventDetails({ params }) {
 
         <article className="detail-card">
           <div className="detail-image-wrap">
-            <Image
+            <EventImage
               className="detail-image"
               src={event.image}
               alt={`${event.title} event`}
               fill
               sizes="(max-width: 760px) 100vw, 1180px"
               priority
-              unoptimized
             />
             <CategoryBadge category={event.category} />
           </div>

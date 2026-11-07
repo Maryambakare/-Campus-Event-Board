@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#eef1e8"/>
+  <circle cx="960" cy="170" r="220" fill="#e1e9d8"/>
+  <path d="M0 620 280 400l220 170 200-220 500 350v100H0Z" fill="#d5e0d0"/>
+  <path d="M0 700 340 520l220 140 220-180 420 250v70H0Z" fill="#c6d6c6"/>
+  <g fill="none" stroke="#52725d" stroke-linecap="round" stroke-linejoin="round" stroke-width="18">
+    <path d="m485 390 115-95 115 95v150H485Z"/>
+    <path d="M545 540v-95h110v95M525 390h150"/>
+  </g>
+  <text x="600" y="630" fill="#42634d" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="600" text-anchor="middle">Campus event</text>
+</svg>
