@@ -102,20 +102,21 @@
 
 .countdown.compact {
   gap: 9px;
-  margin-top: 13px;
-  padding: 11px 12px;
+  align-items: center;
+  margin-top: 12px;
+  padding: 9px 12px;
   border-radius: 12px;
 }
 
 .compact .clockIcon {
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   border-radius: 10px;
 }
 
 .compact .clockIcon svg {
-  width: 17px;
-  height: 17px;
+  width: 20px;
+  height: 20px;
 }
 
 .compact .title {
