@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navigation from "../../components/Navigation";
 import MyEventsLists from "../../components/MyEventsLists";
 
@@ -18,6 +19,18 @@ export default function MyEvents() {
             </div>
           </div>
           <MyEventsLists />
+          <Link className="detail-action" href="/#events">
+            Explore More Events
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path
+                d="M4 10h11m-4-4 4 4-4 4"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.6"
+              />
+            </svg>
+          </Link>
         </section>
       </main>
       <footer className="site-footer">
