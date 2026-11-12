@@ -501,9 +501,11 @@ a {
 }
 
 .event-image-wrap {
+  display: block;
   position: relative;
-  height: 210px;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
+  border-radius: 16px 16px 0 0;
   background: #e9eee7;
 }
 
@@ -889,10 +891,6 @@ a {
   .event-grid {
     grid-template-columns: 1fr;
     gap: 16px;
-  }
-
-  .event-image-wrap {
-    height: 220px;
   }
 
   .detail-main {
