@@ -3,13 +3,13 @@
 import { useSavedEvents } from "../context/SavedEventsContext";
 import styles from "./SaveEventButton.module.css";
 
-export default function SaveEventButton({ eventId }) {
+export default function SaveEventButton({ eventId, detail = false }) {
   const { isSaved, toggleSavedEvent } = useSavedEvents();
   const saved = isSaved(eventId);
 
   return (
     <button
-      className={`${styles.button}${saved ? ` ${styles.saved}` : ""}`}
+      className={`${styles.button}${saved ? ` ${styles.saved}` : ""}${detail ? ` ${styles.detail}` : ""}`}
       type="button"
       aria-pressed={saved}
       onClick={() => toggleSavedEvent(eventId)}
