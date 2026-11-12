@@ -560,18 +560,6 @@ a {
   line-height: 1.35;
 }
 
-.event-description {
-  display: -webkit-box;
-  min-height: 63px;
-  overflow: hidden;
-  margin: 10px 0 18px;
-  color: #737d76;
-  font-size: 13px;
-  line-height: 1.6;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-}
-
 .event-card-footer {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;

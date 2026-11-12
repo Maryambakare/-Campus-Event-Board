@@ -40,14 +40,13 @@ export default function EventCard({ event }) {
           <Link href={`/events/${event.id}`}>{event.title}</Link>
         </h3>
         <EventCountdown event={event} compact />
-        <p className="event-description">{event.description}</p>
         <div className="event-card-footer">
           <span className="event-venue" title={event.venue}>
             {event.venue}
           </span>
           <SaveEventButton eventId={event.id} />
           <Link className="event-link" href={`/events/${event.id}`}>
-            Details
+            See Details
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
               <path
                 d="M4 10h11m-4-4 4 4-4 4"
