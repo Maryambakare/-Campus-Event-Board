@@ -126,7 +126,7 @@ export default async function EventDetails({ params }) {
             </div>
 
             <EventCountdown event={event} />
-            <SaveEventButton eventId={event.id} />
+            <SaveEventButton eventId={event.id} detail />
             <Link className="detail-action" href="/">
               Explore more events
               <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
