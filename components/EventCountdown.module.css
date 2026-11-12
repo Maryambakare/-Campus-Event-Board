@@ -99,3 +99,47 @@
     font-size: 17px;
   }
 }
+
+.countdown.compact {
+  gap: 9px;
+  margin-top: 13px;
+  padding: 11px 12px;
+  border-radius: 12px;
+}
+
+.compact .clockIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.compact .clockIcon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.compact .title {
+  margin: 0 0 5px;
+  font-size: 9px;
+}
+
+.compact .message,
+.compact .prefix {
+  font-size: 12px;
+}
+
+.compact .units {
+  gap: 5px;
+}
+
+.compact .unit {
+  gap: 3px;
+}
+
+.compact .unit strong {
+  font-size: 15px;
+}
+
+.compact .unit > span {
+  font-size: 10px;
+}

@@ -12,7 +12,7 @@ function unitLabel(value, unit) {
   return value === 1 ? unit : `${unit}s`;
 }
 
-export default function EventCountdown({ event }) {
+export default function EventCountdown({ event, compact = false }) {
   const [now, setNow] = useState(null);
 
   useEffect(() => {
@@ -29,7 +29,10 @@ export default function EventCountdown({ event }) {
     now === null ? null : getEventCountdown(event, new Date(now));
 
   return (
-    <section className={styles.countdown} aria-label="Event countdown">
+    <section
+      className={`${styles.countdown}${compact ? ` ${styles.compact}` : ""}`}
+      aria-label="Event countdown"
+    >
       <div className={styles.clockIcon} aria-hidden="true">
         <svg viewBox="0 0 20 20" fill="none">
           <circle

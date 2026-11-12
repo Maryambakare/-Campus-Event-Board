@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CategoryBadge from "./CategoryBadge";
+import EventCountdown from "./EventCountdown";
 import EventImage from "./EventImage";
 import SaveEventButton from "./SaveEventButton";
 
@@ -27,9 +28,9 @@ export default function EventCard({ event }) {
           fill
           sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
         />
-        <CategoryBadge category={event.category} />
       </Link>
       <div className="event-card-content">
+        <CategoryBadge category={event.category} />
         <p className="event-date">
           <time dateTime={`${event.date}T${event.time}`}>{date}</time>
           <span aria-hidden="true"> · </span>
@@ -38,6 +39,7 @@ export default function EventCard({ event }) {
         <h3>
           <Link href={`/events/${event.id}`}>{event.title}</Link>
         </h3>
+        <EventCountdown event={event} compact />
         <p className="event-description">{event.description}</p>
         <div className="event-card-footer">
           <span className="event-venue" title={event.venue}>
